@@ -47,11 +47,11 @@ fun AdivinarNumeroApp() {
     var habilitado by remember { mutableStateOf(true) }
     var tiempoRestante by remember { mutableStateOf(60) }
 
-    // 🔁 Control del temporizador
+    //  Control del temporizador
     var timer by remember { mutableStateOf<CountDownTimer?>(null) }
     var restartKey by remember { mutableStateOf(0) }
 
-    // 🧩 Función para reiniciar el juego
+    //  Función para reiniciar el juego
     fun reiniciarJuego() {
         timer?.cancel()  // Cancelamos el temporizador anterior
         numeroSecreto = (0..100).random()
@@ -84,7 +84,7 @@ fun AdivinarNumeroApp() {
             .fillMaxSize()
             .background(rosaBebe)
     ) {
-        // 🔄 Botón reiniciar
+        //  Botón reiniciar
         Image(
             painter = painterResource(id = R.drawable.reiniciar),
             contentDescription = "Reiniciar juego",
